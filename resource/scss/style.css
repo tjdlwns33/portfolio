@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("reset.css");
 /**************************************
 	Layout #레이아웃
 **************************************/
@@ -6,18 +7,17 @@
   overflow: hidden;
 }
 .layout .header {
+  z-index: 100;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 60px;
-  background-color: rgba(0, 0, 0, 0.3);
+  height: 80px;
 }
 .layout .header .header-wrap {
-  display: flex;
-  justify-content: space-between;
   max-width: 1520px;
   width: 100%;
+  height: 100%;
   margin: 0 auto;
   padding: 0 15px;
   box-sizing: border-box;
@@ -29,7 +29,7 @@
   max-width: 1520px;
   width: 100%;
   margin: 0 auto;
-  padding: 60px 15px 0;
+  padding: 80px 15px 0;
   box-sizing: border-box;
 }
 .layout .footer {
@@ -39,16 +39,34 @@
   max-width: 1520px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 20px 15px;
   box-sizing: border-box;
 }
 
 /**************************************
 	Header #헤더
 **************************************/
+.header {
+  background-color: rgba(255, 255, 255, 0.6);
+  -webkit-backdrop-filter: blur(6px);
+          backdrop-filter: blur(6px);
+}
+.header .header-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .header-wrap .logo-area h1 {
+  font-size: 24px;
+}
+
 /**************************************
 	Container #컨테이너
 **************************************/
+h2 {
+  font-size: 40px;
+}
+
 .container .container-wrap .main {
   height: 100vh;
 }
@@ -60,7 +78,6 @@
   position: absolute;
   top: 0;
   left: 0;
-  font-size: 40px;
 }
 .container .container-wrap .content1 .cont {
   padding-left: 300px;
@@ -78,9 +95,6 @@
 }
 .container .container-wrap .content2 .cont {
   width: 50%;
-}
-.container .container-wrap .content2 h2 {
-  font-size: 40px;
 }
 .container .container-wrap .content2 ul {
   margin-top: 30px;
@@ -105,4 +119,46 @@
   padding-left: 30px;
   box-sizing: border-box;
   background: url("../image/icon_check.png") no-repeat left center;
+}
+.container .container-wrap .content3 {
+  margin: 200px 0;
+}
+.container .container-wrap .content4 {
+  margin: 200px 0 150px;
+}
+.container .container-wrap .content4 .cont {
+  margin-top: 30px;
+}
+.container .container-wrap .content4 .cont p {
+  margin-top: 20px;
+  font-size: 20px;
+}
+.container .container-wrap .content4 .cont p:first-child {
+  margin-top: 0;
+}
+
+/**************************************
+	Footer #푸터
+**************************************/
+.footer {
+  background: #303030;
+}
+.footer .footer-wrap {
+  position: relative;
+}
+.footer .footer-wrap p {
+  padding-right: 60px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.4);
+}
+.footer .footer-wrap .btn-top {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 75px;
+  height: 100%;
+  font-size: 14px;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
 }/*# sourceMappingURL=style.css.map */
