@@ -51,6 +51,18 @@
   -webkit-backdrop-filter: blur(6px);
           backdrop-filter: blur(6px);
 }
+.header:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  max-width: 1520px;
+  width: 100%;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.4);
+  transform: translateX(-50%);
+  transition: 0.3s;
+}
 .header .header-wrap {
   display: flex;
   justify-content: space-between;
@@ -64,6 +76,10 @@
   height: 80px;
   padding: 0 10px;
   font-size: 16px;
+}
+
+.header.active:after {
+  max-width: 100%;
 }
 
 /**************************************
@@ -85,10 +101,18 @@ h2 {
   left: 50%;
   font-size: 100px;
   font-weight: 700;
-  color: #ffffff;
   transform: translate(-50%, -50%);
   transition: 0.8s;
   white-space: nowrap;
+}
+.container .container-wrap .main .cont .bg-line {
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 0;
+  height: 5px;
+  border-radius: 10px;
+  background: #303030;
 }
 .container .container-wrap .main .cont.active {
   opacity: 1;
@@ -96,54 +120,12 @@ h2 {
 .container .container-wrap .main .cont.active p {
   font-size: 70px;
 }
+.container .container-wrap .main .cont.active .bg-line {
+  width: 100%;
+  transition: cubic-bezier(0.73, 0.03, 0.15, 0.98) 0.5s 0.4s;
+}
 .container .container-wrap .main .cont.nofix p {
   position: absolute;
-}
-.container .container-wrap .main .bg-wrap {
-  z-index: -1;
-  overflow: hidden;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  height: 100%;
-  transform: translate(-50%, -50%);
-}
-.container .container-wrap .main .bg-wrap .bg {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.2);
-  transform: translateY(-50%) rotate3d(1, 1, 1, 199deg);
-  animation: bgani 5s infinite alternate;
-}
-.container .container-wrap .main .bg-wrap .bg:nth-of-type(1) {
-  top: 30%;
-}
-.container .container-wrap .main .bg-wrap .bg:nth-of-type(2) {
-  top: 40%;
-}
-.container .container-wrap .main .bg-wrap .bg:nth-of-type(3) {
-  top: 50%;
-}
-.container .container-wrap .main .bg-wrap .bg:nth-of-type(4) {
-  top: 60%;
-}
-.container .container-wrap .main .bg-wrap .bg:nth-of-type(5) {
-  top: 70%;
-}
-.container .container-wrap .main .bg-wrap.nofix {
-  position: absolute;
-  transform: translateX(-50%);
-}
-@keyframes bgani {
-  0% {
-    transform: translateY(-50%) rotate3d(1, 1, 1, 199deg);
-  }
-  100% {
-    transform: translateY(-50%) rotate3d(1, 1, 1, 300deg);
-  }
 }
 .container .container-wrap .content1 {
   position: relative;

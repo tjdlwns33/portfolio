@@ -58,6 +58,18 @@
 	background-color: rgba(255,255,255,.6);
 	backdrop-filter: blur(6px);
 	
+	&:after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		max-width: 1520px;
+		width: 100%;
+		height: 1px;
+		background: rgba(0,0,0,.4);
+		transform: translateX(-50%);
+		transition: 0.3s;
+	}
 
 	.header-wrap {
 		display: flex;
@@ -78,6 +90,12 @@
 				font-size: 16px;
 			}
 		}
+	}
+}
+
+.header.active {
+	&:after {
+		max-width: 100%;
 	}
 }
 
@@ -103,11 +121,20 @@ h2 {
 					top: 50%;
 					left: 50%;
 					font-size: 100px;
-					font-weight: 700;
-					color: #ffffff;
+					font-weight: 700;;
 					transform: translate(-50%, -50%);
 					transition: .8s;
 					white-space: nowrap;
+				}
+
+				.bg-line {
+					position: absolute;
+					bottom: -10px;
+					left: 0;
+					width: 0;
+					height: 5px;
+					border-radius: 10px;
+					background: #303030;
 				}
 			}
 
@@ -118,6 +145,11 @@ h2 {
 					font-size: 70px;
 					
 				}
+
+				.bg-line {
+					width: 100%;
+					transition: cubic-bezier(0.73, 0.03, 0.15, 0.98) 0.5s 0.4s;
+				}
 			}
 
 			.cont.nofix {
@@ -125,57 +157,7 @@ h2 {
 					position: absolute;
 				}
 			}
-
-			.bg-wrap {
-				z-index: -1;
-				overflow: hidden;
-				position: fixed;
-				top: 50%;
-				left: 50%;
-				width: 100%;
-				height: 100%;
-				transform: translate(-50%, -50%);
-
-				.bg {
-					position: absolute;
-					left: 0;
-					width: 100%;
-					height: 100%;
-					background: rgba(0,0,0,.2);
-					transform: translateY(-50%) rotate3d(1,1,1,199deg);
-					animation: bgani 5s infinite alternate;
-				}
-				.bg:nth-of-type(1){
-					top: 30%;
-				}
-				.bg:nth-of-type(2){
-					top: 40%;
-				}
-				.bg:nth-of-type(3){
-					top: 50%;
-				}
-				.bg:nth-of-type(4){
-					top: 60%;
-				}
-				.bg:nth-of-type(5){
-					top: 70%;
-				}
-			}
-
-			.bg-wrap.nofix {
-				position: absolute;
-				transform: translateX(-50%);
-			}
 		}
-
-@keyframes bgani {
-	0% {
-		transform: translateY(-50%) rotate3d(1,1,1,199deg);
-	}
-	100% {
-		transform: translateY(-50%) rotate3d(1,1,1,300deg);
-	}
-}
 
 		.content1 {
 			position: relative;

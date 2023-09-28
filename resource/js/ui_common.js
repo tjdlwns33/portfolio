@@ -60,19 +60,21 @@ $(document).on('click', '.skip-navi a', function() {
 */
 //메인비주얼 초기실행
 function mainVisualLoad(){
+    $('.header').removeClass('active');
+    // $('.main').find('.cont').removeClass('active nofix');
     $('.main').find('.cont').eq(0).addClass('active');
 }
 
-
+//메인비주얼
 function mainVisual(){
-    // bg
-    if ( scrT >= 0 && scrT <= maincontH){
-        $('.bg-wrap').css('top','50%').removeClass('nofix');
+    // 헤더
+    if ( scrT >= maincontH ){
+        $('.header').addClass('active');
     } else {
-        $('.bg-wrap').css('top',maincontH).addClass('nofix');
+        $('.header').removeClass('active');
     }
 
-    // cont
+    // 메인컨텐츠
     if ( scrT > maincontH/2 ){
         $('.main').find('.cont').eq(0).removeClass('active');
         $('.main').find('.cont').eq(1).addClass('active');
@@ -95,7 +97,7 @@ function mainVisual(){
 */
 $(document).on('click', '.btn-top', function() {
     $(window).scrollTop(0);
-    mainVisualLoad();////메인비주얼 초기실행
+    mainVisualLoad();//메인비주얼 초기실행
 })
 
 
@@ -108,5 +110,7 @@ $(document).on('click', '.btn-navi', function() {
     var $target = $('.content').eq(thisIndex);
 
     $('html, body').stop().animate({ scrollTop : $target.offset().top }, 300);
-    $target.attr('tabindex','-1').focus();
+    setTimeout(function(){
+        $target.attr('tabindex','-1').focus();
+    },300)
 })
