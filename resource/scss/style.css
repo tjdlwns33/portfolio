@@ -173,10 +173,12 @@ h2 {
 }
 .container .container-wrap .content1 {
   position: relative;
+  padding: 200px 0 0;
+  margin-top: -200px;
 }
 .container .container-wrap .content1 h2 {
   position: absolute;
-  top: 0;
+  top: 200px;
   left: 0;
 }
 .container .container-wrap .content1 .cont {
@@ -463,6 +465,10 @@ h2 {
   .layout .container .main .cont.nofix .bg-text text {
     stroke-dashoffset: 1061;
   }
+  .layout .container .content1 {
+    padding: 150px 0 0;
+    margin-top: -150px;
+  }
   .layout .container .content1 h2 {
     position: static;
   }
@@ -596,6 +602,10 @@ h2 {
   }
   .layout .container .main .cont.nofix .bg-text text {
     stroke-dashoffset: 470;
+  }
+  .layout .container .content1 {
+    padding: 80px 0 0;
+    margin-top: -80px;
   }
   .layout .container .content1 h2 {
     position: static;
