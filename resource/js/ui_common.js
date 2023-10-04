@@ -10,12 +10,12 @@ var scrT;//윈도우 스크롤탑
 	Load
 */
 $(window).on('load', function(){
-    scrT = $(this).scrollTop();
-    maincontH = $('.main').find('.cont').outerHeight();
+	scrT = $(this).scrollTop();//윈도우 스크롤탑
+	maincontH = $('.main').find('.cont').outerHeight();//메인 컨텐츠 높이
 
-    if ( scrT == 0 ){
-        mainVisualLoad();//메인비주얼 초기실행
-    }
+	if ( scrT == 0 ){
+		mainVisualLoad();//메인비주얼 초기실행
+	}
 })
 
 
@@ -24,9 +24,9 @@ $(window).on('load', function(){
 	Scroll
 */
 $(window).on('scroll', function(){
-    scrT = $(this).scrollTop();
-    
-    mainVisual();//메인비주얼
+	scrT = $(this).scrollTop();//윈도우 스크롤탑
+	
+	mainVisual();//메인비주얼
 })
 
 
@@ -43,7 +43,7 @@ $(document).on('blur', '.skip-navi a', function() {
 //링크이동 시 영역 포커스
 $(document).on('click', '.skip-navi a', function() {
 	var skipId = $(this).attr('data-skipnaviId');
-    var $skipEl;
+	var $skipEl;
 	if( skipId == 'navi'){
 		$skipEl = $('.navi-area');
 	}
@@ -60,34 +60,33 @@ $(document).on('click', '.skip-navi a', function() {
 */
 //메인비주얼 초기실행
 function mainVisualLoad(){
-    $('.header').removeClass('active');
-    // $('.main').find('.cont').removeClass('active nofix');
-    $('.main').find('.cont').eq(0).addClass('active');
+	$('.header').removeClass('active');
+	$('.main').find('.cont').eq(0).addClass('active');
 }
 
 //메인비주얼
 function mainVisual(){
-    // 헤더
-    if ( scrT >= maincontH ){
-        $('.header').addClass('active');
-    } else {
-        $('.header').removeClass('active');
-    }
+	// 헤더
+	if ( scrT >= maincontH ){
+		$('.header').addClass('active');
+	} else {
+		$('.header').removeClass('active');
+	}
 
-    // 메인컨텐츠
-    if ( scrT > maincontH/2 ){
-        $('.main').find('.cont').eq(0).removeClass('active');
-        $('.main').find('.cont').eq(1).addClass('active');
+	// 메인컨텐츠
+	if ( scrT > maincontH/2 ){
+		$('.main').find('.cont').eq(0).removeClass('active');
+		$('.main').find('.cont').eq(1).addClass('active');
 
-        if(scrT >= maincontH) { 
-            $('.main').find('.cont').eq(1).addClass('nofix');
-        } else {
-            $('.main').find('.cont').eq(1).removeClass('nofix');
-        }
-    } else if ( scrT < maincontH/2 && scrT > 0 ) {
-        $('.main').find('.cont').eq(0).addClass('active');
-        $('.main').find('.cont').eq(1).removeClass('active');
-    }
+		if(scrT >= maincontH) { 
+			$('.main').find('.cont').eq(1).addClass('nofix');
+		} else {
+			$('.main').find('.cont').eq(1).removeClass('nofix');
+		}
+	} else if ( scrT < maincontH/2 && scrT > 0 ) {
+		$('.main').find('.cont').eq(0).addClass('active');
+		$('.main').find('.cont').eq(1).removeClass('active');
+	}
 }
 
 
@@ -96,8 +95,8 @@ function mainVisual(){
 	스크롤 탑버튼
 */
 $(document).on('click', '.btn-top', function() {
-    $(window).scrollTop(0);
-    mainVisualLoad();//메인비주얼 초기실행
+	$(window).scrollTop(0);
+	mainVisualLoad();//메인비주얼 초기실행
 })
 
 
@@ -106,11 +105,11 @@ $(document).on('click', '.btn-top', function() {
 	네비게이션
 */
 $(document).on('click', '.btn-navi', function() {
-    var thisIndex = $(this).index();
-    var $target = $('.content').eq(thisIndex);
+	var thisIndex = $(this).index();
+	var $target = $('.content').eq(thisIndex);
 
-    $('html, body').stop().animate({ scrollTop : $target.offset().top }, 300);
-    setTimeout(function(){
-        $target.attr('tabindex','-1').focus();
-    },300)
+	$('html, body').stop().animate({ scrollTop : $target.offset().top }, 300);
+	setTimeout(function(){
+		$target.attr('tabindex','-1').focus();
+	},300)
 })

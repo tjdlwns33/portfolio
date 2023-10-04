@@ -77,15 +77,19 @@
 		align-items: center;
 
 		.logo-area {
+			padding-left: 10px;
+
 			h1 {
 				font-size: 20px;
 			}
 		}
 
 		.navi-area {
+			height: 100%;
+
 			.btn-navi {
 				display: inline-block;
-				height: 80px;
+				height: 100%;
 				padding: 0 10px;
 				font-size: 16px;
 			}
@@ -111,6 +115,7 @@ h2 {
 	.container-wrap {
 		.main {
 			.cont {
+				z-index: -999;
 				opacity: 0;
 				position: relative;
 				height: 100vh;
@@ -139,6 +144,7 @@ h2 {
 			}
 
 			.cont.active {
+				z-index: 0;
 				opacity: 1;
 
 				p {
@@ -161,11 +167,10 @@ h2 {
 
 		.content1 {
 			position: relative;
-			padding: 200px 0 0;
 
 			h2 {
 				position: absolute;
-				top: 200px;
+				top: 0;
 				left: 0;
 			}
 
@@ -234,10 +239,12 @@ h2 {
 
 				> ul {
 					margin: -50px 0 0 -30px;
+					font-size: 0;
 
 					> li {
 						position: relative;
-						float: left;
+						display: inline-block;
+						vertical-align: top;
 						width: calc(33.33% - 30px);
 						margin: 50px 0 0 30px;
 						box-sizing: border-box;
@@ -257,7 +264,7 @@ h2 {
 							.tag {
 								display: inline-block;
 								vertical-align: middle;
-								margin-left: 2px;
+								margin-left: 6px;
 								padding: 3px 10px;
 								font-size: 14px;
 								font-weight: 500;
@@ -444,5 +451,368 @@ h2 {
 	> a.active {
 		opacity: 1;
 		top: 0;
+	}
+}
+
+// 줄떨굼
+.pc-hide {
+	display: none;
+}
+
+
+
+/**************************************
+	Responsive #반응형
+**************************************/
+// 태블릿
+@media all and (min-width:768px) and (max-width:1023px) {
+	.layout {
+		// 헤더
+		.header {
+			height: 65px;
+
+			.header-wrap {
+				padding: 0 20px;
+
+				.logo-area {
+					h1 {
+						font-size: 16px;
+					}
+				}
+
+				.navi-area {
+					.btn-navi {
+						font-size: 14px;
+					}
+				}
+			}
+		}
+
+		// 컨테이너
+		.container {
+			.container-wrap {
+				padding: 0 30px;
+			}
+
+			.main {
+				.cont {
+					p {
+						font-size: 80px;
+					}
+				}
+
+				.cont.active {
+					p {
+						font-size: 60px;
+					}
+				}
+			}
+
+			.content1 {
+				h2 {
+					position: static;
+				}
+				
+				.cont {
+					margin-top: 20px;
+					padding-left: 10px;
+
+					p {
+						font-size: 16px;
+					}
+				}
+			}
+
+			.content2 {
+				padding: 150px 0 0;
+
+				ul {
+					margin-top: 20px;
+					font-size: 16px;
+				}
+
+				.carrer {
+					li {
+						padding-left: 20px;
+
+						&:after {
+							width: 4px;
+							height: 4px;
+						}
+					}
+				}
+
+				.skills {
+					li {
+						padding-left: 20px;
+						background-size: 10px;
+					}
+				}
+			}
+
+			.content3 {
+				padding: 150px 0 0;
+
+				.cont {
+					margin-top: 20px;
+
+					> ul {
+						> li {
+							width: calc(50% - 30px);
+
+							.prj-tag {
+								.tag {
+									margin-left: 4px;
+									font-size: 13px;
+								}
+							}
+
+							.prj-img {
+								height: 240px;
+							}
+
+							.prj-info {
+								margin-top: 15px;
+
+								.title {
+									font-size: 16px;
+								}
+
+								.conts {
+									font-size: 16px;
+								}
+							}
+						}
+					}
+				}
+			}
+
+			.content4 {
+				padding: 150px 0 100px;
+
+				.cont {
+					margin-top: 20px;
+
+					p {
+						margin-top: 10px;
+						font-size: 16px;
+					}
+				}
+			}
+		}
+
+		.footer {
+			.footer-wrap {
+				padding: 15px 25px;
+
+				p {
+					padding-right: 45px;
+					font-size: 13px;
+				}
+
+				.btn-top {
+					width: 70px;
+					font-size: 13px;
+				}
+			}
+		}
+	}
+
+	h2 {
+		font-size: 30px;				
+	}
+
+	// 줄떨굼
+	.pc-hide {
+		display: block;
+	}
+}
+
+// 모바일
+@media all and (max-width:767px) {
+	.layout {
+		// 헤더
+		.header {
+			height: 55px;
+
+			.header-wrap {
+				padding: 0 10px;
+
+				.logo-area {
+					h1 {
+						display: none;
+					}
+				}
+
+				.navi-area {
+					.btn-navi {
+						padding: 0 5px;
+						font-size: 12px;
+					}
+				}
+			}
+		}
+
+		// 컨테이너
+		.container {
+			.container-wrap {
+				padding: 0 15px;
+			}
+
+			.main {
+				.cont {
+					p {
+						font-size: 50px;
+					}
+
+					
+					.bg-line {
+						height: 3px;
+					}
+				}
+
+				.cont.active {
+					p {
+						font-size: 30px;
+					}
+				}
+			}
+
+			.content1 {
+				h2 {
+					position: static;
+				}
+				
+				.cont {
+					margin-top: 15px;
+					padding-left: 0;
+
+					p {
+						margin-top: 12px;
+						font-size: 14px;
+					}
+				}
+			}
+
+			.content2 {
+				display: block;
+				padding: 80px 0 0;
+
+				.cont {
+					width: 100%;
+					margin-top: 80px;
+
+					&:first-child {
+						margin-top: 0;
+					}
+				}
+
+				ul {
+					margin-top: 15px;
+					font-size: 14px;
+				}
+
+				.carrer {
+					li {
+						padding-left: 20px;
+
+						&:after {
+							width: 4px;
+							height: 4px;
+						}
+					}
+				}
+
+				.skills {
+					li {
+						padding-left: 20px;
+						background-size: 10px;
+					}
+				}
+			}
+
+			.content3 {
+				padding: 80px 0 0;
+
+				.cont {
+					margin-top: 15px;
+
+					> ul {
+						margin: -40px 0 0 0;
+
+						> li {
+							width: 100%;
+							margin: 40px 0 0 0;
+
+							.prj-tag {
+								.tag {
+									margin-left: 4px;
+									font-size: 11px;
+									padding: 2px 8px;
+								}
+							}
+
+							.prj-img {
+								height: 150px;
+							}
+
+							.prj-info {
+								margin-top: 10px;
+
+								.title {
+									font-size: 14px;
+								}
+
+								.conts {
+									font-size: 14px;
+								}
+							}
+						}
+					}
+				}
+			}
+
+			.content4 {
+				padding: 80px 0 80px;
+
+				.cont {
+					margin-top: 15px;
+
+					p {
+						margin-top: 10px;
+						font-size: 14px;
+					}
+				}
+			}
+		}
+
+		.footer {
+			.footer-wrap {
+				padding: 15px;
+
+				p {
+					padding-right: 45px;
+					font-size: 12px;
+				}
+
+				.btn-top {
+					width: 60px;
+					font-size: 12px;
+				}
+			}
+		}
+	}
+
+	h2 {
+		font-size: 24px;				
+	}
+
+	// 줄떨굼
+	.pc-hide {
+		display: block;
+	}
+	
+	.mo-hide {
+		display: none;
 	}
 }
