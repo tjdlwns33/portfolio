@@ -112,6 +112,36 @@ h2 {
   transition: 0.8s;
   white-space: nowrap;
 }
+.container .container-wrap .main .cont .bg-text {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+}
+.container .container-wrap .main .cont .bg-text.text1 text {
+  font-family: "Dancing Script";
+  font-size: 350px;
+  letter-spacing: 40px;
+  stroke-width: 3px;
+  stroke: #e6f1f9;
+  fill: transparent;
+  stroke-dashoffset: 1237;
+  stroke-dasharray: 1237;
+  transition: stroke-dashoffset 2s;
+  transform: translateY(58%);
+}
+.container .container-wrap .main .cont .bg-text.text2 text {
+  font-family: "Dancing Script";
+  font-size: 300px;
+  stroke-width: 3px;
+  stroke: #e6f9ed;
+  fill: transparent;
+  stroke-dashoffset: 1768;
+  stroke-dasharray: 1768;
+  transition: stroke-dashoffset 2s;
+  transform: translateY(58%);
+}
 .container .container-wrap .main .cont .bg-line {
   position: absolute;
   bottom: -10px;
@@ -128,12 +158,18 @@ h2 {
 .container .container-wrap .main .cont.active p {
   font-size: 70px;
 }
+.container .container-wrap .main .cont.active .bg-text text {
+  stroke-dashoffset: 0;
+}
 .container .container-wrap .main .cont.active .bg-line {
   width: 100%;
   transition: cubic-bezier(0.73, 0.03, 0.15, 0.98) 0.5s 0.4s;
 }
 .container .container-wrap .main .cont.nofix p {
   position: absolute;
+}
+.container .container-wrap .main .cont.nofix .bg-text text {
+  stroke-dashoffset: 1768;
 }
 .container .container-wrap .content1 {
   position: relative;
@@ -399,8 +435,33 @@ h2 {
   .layout .container .main .cont p {
     font-size: 80px;
   }
+  .layout .container .main .cont .bg-text.text1 {
+    width: 429px;
+  }
+  .layout .container .main .cont .bg-text.text1 text {
+    letter-spacing: 20px;
+    font-size: 200px;
+    stroke-dasharray: 706;
+    stroke-dashoffset: 706;
+    transform: translateY(56%);
+  }
+  .layout .container .main .cont .bg-text.text2 {
+    width: 566px;
+  }
+  .layout .container .main .cont .bg-text.text2 text {
+    font-size: 180px;
+    stroke-dasharray: 1061;
+    stroke-dashoffset: 1061;
+    transform: translateY(56%);
+  }
   .layout .container .main .cont.active p {
     font-size: 60px;
+  }
+  .layout .container .main .cont.active .bg-text text {
+    stroke-dashoffset: 0;
+  }
+  .layout .container .main .cont.nofix .bg-text text {
+    stroke-dashoffset: 1061;
   }
   .layout .container .content1 h2 {
     position: static;
@@ -503,11 +564,38 @@ h2 {
   .layout .container .main .cont p {
     font-size: 50px;
   }
+  .layout .container .main .cont .bg-text.text1 {
+    width: 214px;
+  }
+  .layout .container .main .cont .bg-text.text1 text {
+    letter-spacing: 10px;
+    font-size: 100px;
+    stroke-width: 1px;
+    stroke-dasharray: 352;
+    stroke-dashoffset: 352;
+    transform: translateY(54%);
+  }
+  .layout .container .main .cont .bg-text.text2 {
+    width: 252px;
+  }
+  .layout .container .main .cont .bg-text.text2 text {
+    font-size: 80px;
+    stroke-width: 1px;
+    stroke-dasharray: 470;
+    stroke-dashoffset: 470;
+    transform: translateY(54%);
+  }
   .layout .container .main .cont .bg-line {
     height: 3px;
   }
   .layout .container .main .cont.active p {
     font-size: 30px;
+  }
+  .layout .container .main .cont.active .bg-text text {
+    stroke-dashoffset: 0;
+  }
+  .layout .container .main .cont.nofix .bg-text text {
+    stroke-dashoffset: 470;
   }
   .layout .container .content1 h2 {
     position: static;
