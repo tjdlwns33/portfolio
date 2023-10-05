@@ -586,6 +586,7 @@ h2 {
     stroke-dasharray: 352;
     stroke-dashoffset: 352;
     transform: translateY(54%);
+    fill: red;
   }
   .layout .container .main .cont .bg-text.text2 {
     width: 252px;
