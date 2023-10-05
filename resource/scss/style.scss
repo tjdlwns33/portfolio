@@ -141,6 +141,10 @@ h2 {
 					transform: translate(-50%, -50%);
 
 					&.text1 {
+						g {
+							transform: translateY(58%);
+						}
+
 						text {
 							font-family: 'Dancing Script';
 							font-size: 350px;
@@ -151,11 +155,14 @@ h2 {
 							stroke-dashoffset: 1237;
 							stroke-dasharray: 1237;
 							transition: stroke-dashoffset 2s;
-							transform: translateY(58%);
 						}
 					}
 
 					&.text2 {
+						g {
+							transform: translateY(58%);
+						}
+
 						text {
 							font-family: 'Dancing Script';
 							font-size: 300px;
@@ -165,7 +172,6 @@ h2 {
 							stroke-dashoffset: 1768;
 							stroke-dasharray: 1768;
 							transition: stroke-dashoffset 2s;
-							transform: translateY(58%);
 						}
 					}
 				}
@@ -556,23 +562,29 @@ h2 {
 						&.text1 {
 							width: 429px;
 
+							g {
+								transform: translateY(56%);
+							}
+
 							text {
 								letter-spacing: 20px;
 								font-size: 200px;
 								stroke-dasharray: 706;
 								stroke-dashoffset: 706;
-								transform: translateY(56%);
 							}
 						}
 
 						&.text2 {
 							width: 566px;
 
+							g {
+								transform: translateY(56%);
+							}
+
 							text {
 								font-size: 180px;
 								stroke-dasharray: 1061;
 								stroke-dashoffset: 1061;
-								transform: translateY(56%);
 							}
 						}
 					}
@@ -760,12 +772,12 @@ h2 {
 					}
 
 					.bg-text {
-						top: 0;
-						left: 0;
-						transform: none;
-
 						&.text1 {
 							width: 214px;
+
+							g {
+								transform: translateY(54%);
+							}
 
 							text {
 								letter-spacing: 10px;
@@ -773,21 +785,22 @@ h2 {
 								stroke-width: 1px;
 								stroke-dasharray: 352;
 								stroke-dashoffset: 352;
-								transform: translateY(54%);
-								// transform: translateY(0);
-								fill: red;
 							}
+
 						}
 
 						&.text2 {
 							width: 252px;
+
+							g {
+								transform: translateY(54%);
+							}
 
 							text {
 								font-size: 80px;
 								stroke-width: 1px;
 								stroke-dasharray: 470;
 								stroke-dashoffset: 470;
-								transform: translateY(54%);
 							}
 						}
 					}

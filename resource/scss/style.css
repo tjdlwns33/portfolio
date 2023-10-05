@@ -120,6 +120,9 @@ h2 {
   height: 100%;
   transform: translate(-50%, -50%);
 }
+.container .container-wrap .main .cont .bg-text.text1 g {
+  transform: translateY(58%);
+}
 .container .container-wrap .main .cont .bg-text.text1 text {
   font-family: "Dancing Script";
   font-size: 350px;
@@ -130,6 +133,8 @@ h2 {
   stroke-dashoffset: 1237;
   stroke-dasharray: 1237;
   transition: stroke-dashoffset 2s;
+}
+.container .container-wrap .main .cont .bg-text.text2 g {
   transform: translateY(58%);
 }
 .container .container-wrap .main .cont .bg-text.text2 text {
@@ -141,7 +146,6 @@ h2 {
   stroke-dashoffset: 1768;
   stroke-dasharray: 1768;
   transition: stroke-dashoffset 2s;
-  transform: translateY(58%);
 }
 .container .container-wrap .main .cont .bg-line {
   position: absolute;
@@ -441,21 +445,25 @@ h2 {
   .layout .container .main .cont .bg-text.text1 {
     width: 429px;
   }
+  .layout .container .main .cont .bg-text.text1 g {
+    transform: translateY(56%);
+  }
   .layout .container .main .cont .bg-text.text1 text {
     letter-spacing: 20px;
     font-size: 200px;
     stroke-dasharray: 706;
     stroke-dashoffset: 706;
-    transform: translateY(56%);
   }
   .layout .container .main .cont .bg-text.text2 {
     width: 566px;
+  }
+  .layout .container .main .cont .bg-text.text2 g {
+    transform: translateY(56%);
   }
   .layout .container .main .cont .bg-text.text2 text {
     font-size: 180px;
     stroke-dasharray: 1061;
     stroke-dashoffset: 1061;
-    transform: translateY(56%);
   }
   .layout .container .main .cont.active p {
     font-size: 60px;
@@ -571,13 +579,11 @@ h2 {
   .layout .container .main .cont p {
     font-size: 50px;
   }
-  .layout .container .main .cont .bg-text {
-    top: 0;
-    left: 0;
-    transform: none;
-  }
   .layout .container .main .cont .bg-text.text1 {
     width: 214px;
+  }
+  .layout .container .main .cont .bg-text.text1 g {
+    transform: translateY(54%);
   }
   .layout .container .main .cont .bg-text.text1 text {
     letter-spacing: 10px;
@@ -585,18 +591,18 @@ h2 {
     stroke-width: 1px;
     stroke-dasharray: 352;
     stroke-dashoffset: 352;
-    transform: translateY(54%);
-    fill: red;
   }
   .layout .container .main .cont .bg-text.text2 {
     width: 252px;
+  }
+  .layout .container .main .cont .bg-text.text2 g {
+    transform: translateY(54%);
   }
   .layout .container .main .cont .bg-text.text2 text {
     font-size: 80px;
     stroke-width: 1px;
     stroke-dasharray: 470;
     stroke-dashoffset: 470;
-    transform: translateY(54%);
   }
   .layout .container .main .cont .bg-line {
     height: 3px;
