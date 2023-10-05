@@ -107,65 +107,69 @@ h2 {
 					left: 50%;
 					height: 100%;
 					transform: translate(-50%, -50%);
+				}
 
-					&.text1 {
-						g {
-							transform: translateY(58%);
-						}
-
-						text {
-							font-family: 'Dancing Script';
-							font-size: 350px;
-							letter-spacing: 40px;
-							stroke-width: 3px;
-							stroke: #8ba7cf;
-							fill: transparent;
-							stroke-dashoffset: 1237;
-							stroke-dasharray: 1237;
-							transition: stroke-dashoffset 1.5s;
-						}
+				.bg-text.text1 {
+					g {
+						transform: translateY(58%);
 					}
 
-					&.text2 {
-						g {
-							transform: translateY(58%);
-						}
-
-						text {
-							font-family: 'Dancing Script';
-							font-size: 300px;
-							stroke-width: 3px;
-							stroke: #c1a9f3;
-							fill: transparent;
-							stroke-dashoffset: 1768;
-							stroke-dasharray: 1768;
-							transition: stroke-dashoffset 1.5s;
-						}
+					text {
+						font-family: 'Dancing Script';
+						font-size: 350px;
+						letter-spacing: 40px;
+						stroke-width: 3px;
+						stroke: #8ba7cf;
+						fill: transparent;
+						stroke-dashoffset: 1237;
+						stroke-dasharray: 1237;
+						transition: stroke-dashoffset 1.5s;
 					}
+				}
+
+				.bg-text.text2 {
+					g {
+						transform: translateY(58%);
+					}
+
+					text {
+						font-family: 'Dancing Script';
+						font-size: 300px;
+						stroke-width: 3px;
+						stroke: #c1a9f3;
+						fill: transparent;
+						stroke-dashoffset: 1768;
+						stroke-dasharray: 1768;
+						transition: stroke-dashoffset 1.5s;
+					}
+				}
+
+				&:after {
+					content: '';
+					z-index: -1;
+					position: fixed;
+					top: 50%;
+					left: 50%;
+					width: 90vw;
+					height: 90%;
+					background: #5028a7;
+					transform: translate(-50%, -50%);
+					transition: background-color 1s;
+				}
+
+				&:last-child:after {
+					background: #0c1625;
+				}
+
+				&:first-child.active:after {
+					background: #0c1625;
+				}
+
+				&:last-child.active:after {
+					background: #5028a7;
 				}
 			}
 
-			.cont:after {
-				content: '';
-				z-index: -1;
-				position: fixed;
-				top: 50%;
-				left: 50%;
-				width: 90vw;
-				height: 90%;
-				background: #5028a7;
-				transform: translate(-50%, -50%);
-				transition: background-color 1s;
-			}
-			.cont:last-child:after {
-				background: #0c1625;
-			}
-			.cont:first-child.active:after {
-				background: #0c1625;
-			}
-			.cont:last-child.active:after {
-				background: #5028a7;
-			}
 
 			.cont.active {
 				opacity: 1;
@@ -179,6 +183,7 @@ h2 {
 
 			.cont.nofix {
 				position: relative;
+
 				.bg-text {
 					position: absolute;
 
@@ -186,11 +191,12 @@ h2 {
 						stroke-dashoffset: 1768;
 					}
 				}
+
+				&:after {
+					position: absolute;
+				}
 			}
 
-			.cont.nofix:after {
-				position: absolute;
-			}
 		}
 
 		.content1 {
@@ -525,34 +531,32 @@ h2 {
 
 			.main {
 				.cont {
-					.bg-text {
-						&.text1 {
-							width: 429px;
+					.bg-text.text1 {
+						width: 429px;
 
-							g {
-								transform: translateY(56%);
-							}
-
-							text {
-								letter-spacing: 20px;
-								font-size: 200px;
-								stroke-dasharray: 706;
-								stroke-dashoffset: 706;
-							}
+						g {
+							transform: translateY(56%);
 						}
 
-						&.text2 {
-							width: 566px;
+						text {
+							letter-spacing: 20px;
+							font-size: 200px;
+							stroke-dasharray: 706;
+							stroke-dashoffset: 706;
+						}
+					}
 
-							g {
-								transform: translateY(56%);
-							}
+					.bg-text.text2 {
+						width: 566px;
 
-							text {
-								font-size: 180px;
-								stroke-dasharray: 1061;
-								stroke-dashoffset: 1061;
-							}
+						g {
+							transform: translateY(56%);
+						}
+
+						text {
+							font-size: 180px;
+							stroke-dasharray: 1061;
+							stroke-dashoffset: 1061;
 						}
 					}
 				}
@@ -729,37 +733,35 @@ h2 {
 
 			.main {
 				.cont {
-					.bg-text {
-						&.text1 {
-							width: 214px;
+					.bg-text.text1 {
+						width: 214px;
 
-							g {
-								transform: translateY(54%);
-							}
-
-							text {
-								letter-spacing: 10px;
-								font-size: 100px;
-								stroke-width: 1px;
-								stroke-dasharray: 380;
-								stroke-dashoffset: 380;
-							}
-
+						g {
+							transform: translateY(54%);
 						}
 
-						&.text2 {
-							width: 252px;
+						text {
+							letter-spacing: 10px;
+							font-size: 100px;
+							stroke-width: 1px;
+							stroke-dasharray: 580;
+							stroke-dashoffset: 580;
+						}
 
-							g {
-								transform: translateY(54%);
-							}
+					}
 
-							text {
-								font-size: 80px;
-								stroke-width: 1px;
-								stroke-dasharray: 470;
-								stroke-dashoffset: 470;
-							}
+					.bg-text.text2 {
+						width: 252px;
+
+						g {
+							transform: translateY(54%);
+						}
+
+						text {
+							font-size: 80px;
+							stroke-width: 1px;
+							stroke-dasharray: 470;
+							stroke-dashoffset: 470;
 						}
 					}
 				}
