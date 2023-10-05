@@ -349,7 +349,9 @@ h2 {
 								}
 	
 								&:hover:after,
-								&:hover:before {
+								&:hover:before,
+								&:focus:after,
+								&:focus:before {
 									opacity: 1;
 								}
 							}
@@ -744,8 +746,8 @@ h2 {
 							letter-spacing: 10px;
 							font-size: 100px;
 							stroke-width: 1px;
-							stroke-dasharray: 980;
-							stroke-dashoffset: 980;
+							stroke-dasharray: 1080;
+							stroke-dashoffset: 1080;
 						}
 
 					}
@@ -760,8 +762,8 @@ h2 {
 						text {
 							font-size: 80px;
 							stroke-width: 1px;
-							stroke-dasharray: 770;
-							stroke-dashoffset: 770;
+							stroke-dasharray: 870;
+							stroke-dashoffset: 870;
 						}
 					}
 				}

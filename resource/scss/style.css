@@ -284,7 +284,7 @@ h2 {
   background: rgba(0, 0, 0, 0.2);
   transition: 0.3s;
 }
-.container .container-wrap .content3 .cont > ul > li .prj-img > a:hover:after, .container .container-wrap .content3 .cont > ul > li .prj-img > a:hover:before {
+.container .container-wrap .content3 .cont > ul > li .prj-img > a:hover:after, .container .container-wrap .content3 .cont > ul > li .prj-img > a:hover:before, .container .container-wrap .content3 .cont > ul > li .prj-img > a:focus:after, .container .container-wrap .content3 .cont > ul > li .prj-img > a:focus:before {
   opacity: 1;
 }
 .container .container-wrap .content3 .cont > ul > li .prj-img img {
@@ -559,8 +559,8 @@ h2 {
     letter-spacing: 10px;
     font-size: 100px;
     stroke-width: 1px;
-    stroke-dasharray: 980;
-    stroke-dashoffset: 980;
+    stroke-dasharray: 1080;
+    stroke-dashoffset: 1080;
   }
   .layout .container .main .cont .bg-text.text2 {
     width: 252px;
@@ -571,8 +571,8 @@ h2 {
   .layout .container .main .cont .bg-text.text2 text {
     font-size: 80px;
     stroke-width: 1px;
-    stroke-dasharray: 770;
-    stroke-dashoffset: 770;
+    stroke-dasharray: 870;
+    stroke-dashoffset: 870;
   }
   .layout .container .main .cont.active .bg-text text {
     stroke-dashoffset: 0;
