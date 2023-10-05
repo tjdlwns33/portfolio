@@ -571,8 +571,8 @@ h2 {
   .layout .container .main .cont .bg-text.text2 text {
     font-size: 80px;
     stroke-width: 1px;
-    stroke-dasharray: 870;
-    stroke-dashoffset: 870;
+    stroke-dasharray: 1270;
+    stroke-dashoffset: 1270;
   }
   .layout .container .main .cont.active .bg-text text {
     stroke-dashoffset: 0;
