@@ -131,7 +131,6 @@ h2 {
 					transform: translate(-50%, -50%);
 					transition: .8s;
 					white-space: nowrap;
-					color: red;
 				}
 
 				.bg-text {
@@ -143,8 +142,6 @@ h2 {
 					transform: translate(-50%, -50%);
 
 					&.text1 {
-						border: 1px solid #000000;
-
 						text {
 							font-family: 'Dancing Script';
 							font-size: 350px;
@@ -761,6 +758,7 @@ h2 {
 				.cont {
 					p {
 						font-size: 50px;
+						// color: red;
 					}
 
 					.bg-text {
@@ -774,6 +772,8 @@ h2 {
 								stroke-dasharray: 352;
 								stroke-dashoffset: 352;
 								transform: translateY(54%);
+								// transform: translateY(0);
+								fill: red;
 							}
 						}
 

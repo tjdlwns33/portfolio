@@ -112,7 +112,6 @@ h2 {
   transform: translate(-50%, -50%);
   transition: 0.8s;
   white-space: nowrap;
-  color: red;
 }
 .container .container-wrap .main .cont .bg-text {
   z-index: 10;
@@ -121,9 +120,6 @@ h2 {
   left: 50%;
   height: 100%;
   transform: translate(-50%, -50%);
-}
-.container .container-wrap .main .cont .bg-text.text1 {
-  border: 1px solid #000000;
 }
 .container .container-wrap .main .cont .bg-text.text1 text {
   font-family: "Dancing Script";
@@ -586,6 +582,7 @@ h2 {
     stroke-dasharray: 352;
     stroke-dashoffset: 352;
     transform: translateY(54%);
+    fill: red;
   }
   .layout .container .main .cont .bg-text.text2 {
     width: 252px;
