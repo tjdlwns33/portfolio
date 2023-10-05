@@ -559,8 +559,8 @@ h2 {
     letter-spacing: 10px;
     font-size: 100px;
     stroke-width: 1px;
-    stroke-dasharray: 880;
-    stroke-dashoffset: 880;
+    stroke-dasharray: 980;
+    stroke-dashoffset: 980;
   }
   .layout .container .main .cont .bg-text.text2 {
     width: 252px;
@@ -571,8 +571,8 @@ h2 {
   .layout .container .main .cont .bg-text.text2 text {
     font-size: 80px;
     stroke-width: 1px;
-    stroke-dasharray: 470;
-    stroke-dashoffset: 470;
+    stroke-dasharray: 770;
+    stroke-dashoffset: 770;
   }
   .layout .container .main .cont.active .bg-text text {
     stroke-dashoffset: 0;
