@@ -114,7 +114,6 @@ h2 {
   white-space: nowrap;
 }
 .container .container-wrap .main .cont .bg-text {
-  z-index: 10;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -572,6 +571,11 @@ h2 {
   .layout .container .main .cont p {
     font-size: 50px;
   }
+  .layout .container .main .cont .bg-text {
+    top: 0;
+    left: 0;
+    transform: none;
+  }
   .layout .container .main .cont .bg-text.text1 {
     width: 214px;
   }
@@ -582,7 +586,6 @@ h2 {
     stroke-dasharray: 352;
     stroke-dashoffset: 352;
     transform: translateY(54%);
-    fill: red;
   }
   .layout .container .main .cont .bg-text.text2 {
     width: 252px;

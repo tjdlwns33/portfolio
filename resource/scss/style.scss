@@ -134,7 +134,6 @@ h2 {
 				}
 
 				.bg-text {
-					z-index: 10;
 					position: fixed;
 					top: 50%;
 					left: 50%;
@@ -758,10 +757,13 @@ h2 {
 				.cont {
 					p {
 						font-size: 50px;
-						// color: red;
 					}
 
 					.bg-text {
+						top: 0;
+						left: 0;
+						transform: none;
+
 						&.text1 {
 							width: 214px;
 
@@ -773,7 +775,7 @@ h2 {
 								stroke-dashoffset: 352;
 								transform: translateY(54%);
 								// transform: translateY(0);
-								fill: red;
+								// fill: red;
 							}
 						}
 
