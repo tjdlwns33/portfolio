@@ -141,6 +141,8 @@ h2 {
 					transform: translate(-50%, -50%);
 
 					&.text1 {
+						border: 1px solid #000000;
+
 						text {
 							font-family: 'Dancing Script';
 							font-size: 350px;
@@ -150,7 +152,7 @@ h2 {
 							fill: transparent;
 							stroke-dashoffset: 1237;
 							stroke-dasharray: 1237;
-							transition: 2s;
+							transition: stroke-dashoffset 2s;
 							transform: translateY(58%);
 						}
 					}
