@@ -60,19 +60,11 @@ $(document).on('click', '.skip-navi a', function() {
 */
 //메인비주얼 초기실행
 function mainVisualLoad(){
-	$('.header').removeClass('active');
 	$('.main').find('.cont').eq(0).addClass('active');
 }
 
 //메인비주얼
 function mainVisual(){
-	// 헤더
-	if ( scrT >= maincontH ){
-		$('.header').addClass('active');
-	} else {
-		$('.header').removeClass('active');
-	}
-
 	// 메인컨텐츠
 	if ( scrT > maincontH/2 ){
 		$('.main').find('.cont').eq(0).removeClass('active');

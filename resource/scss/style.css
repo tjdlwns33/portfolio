@@ -81,22 +81,8 @@ h2 {
 }
 
 .container .container-wrap .main .cont {
-  z-index: -999;
   opacity: 0;
-  position: relative;
   height: 100vh;
-  transition: 0.8s;
-}
-.container .container-wrap .main .cont p {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  font-size: 100px;
-  font-weight: 700;
-  color: #ffffff;
-  transform: translate(-50%, -50%);
-  transition: 0.8s;
-  white-space: nowrap;
 }
 .container .container-wrap .main .cont .bg-text {
   position: fixed;
@@ -117,7 +103,7 @@ h2 {
   fill: transparent;
   stroke-dashoffset: 1237;
   stroke-dasharray: 1237;
-  transition: stroke-dashoffset 2s;
+  transition: stroke-dashoffset 1.5s;
 }
 .container .container-wrap .main .cont .bg-text.text2 g {
   transform: translateY(58%);
@@ -130,30 +116,7 @@ h2 {
   fill: transparent;
   stroke-dashoffset: 1768;
   stroke-dasharray: 1768;
-  transition: stroke-dashoffset 2s;
-}
-.container .container-wrap .main .cont .bg-line {
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  width: 0;
-  height: 5px;
-  border-radius: 10px;
-  background: #303030;
-}
-.container .container-wrap .main .cont.active {
-  z-index: 0;
-  opacity: 1;
-}
-.container .container-wrap .main .cont.active p {
-  font-size: 70px;
-}
-.container .container-wrap .main .cont.active .bg-text text {
-  stroke-dashoffset: 0;
-}
-.container .container-wrap .main .cont.active .bg-line {
-  width: 100%;
-  transition: cubic-bezier(0.73, 0.03, 0.15, 0.98) 0.5s 0.4s;
+  transition: stroke-dashoffset 1.5s;
 }
 .container .container-wrap .main .cont:after {
   content: "";
@@ -161,12 +124,31 @@ h2 {
   position: fixed;
   top: 50%;
   left: 50%;
-  width: 90%;
+  width: 90vw;
   height: 90%;
-  background: #0c1625;
+  background: #5028a7;
   transform: translate(-50%, -50%);
+  transition: background-color 1s;
 }
-.container .container-wrap .main .cont.nofix p {
+.container .container-wrap .main .cont:last-child:after {
+  background: #0c1625;
+}
+.container .container-wrap .main .cont:first-child.active:after {
+  background: #0c1625;
+}
+.container .container-wrap .main .cont:last-child.active:after {
+  background: #5028a7;
+}
+.container .container-wrap .main .cont.active {
+  opacity: 1;
+}
+.container .container-wrap .main .cont.active .bg-text text {
+  stroke-dashoffset: 0;
+}
+.container .container-wrap .main .cont.nofix {
+  position: relative;
+}
+.container .container-wrap .main .cont.nofix .bg-text {
   position: absolute;
 }
 .container .container-wrap .main .cont.nofix .bg-text text {
@@ -174,12 +156,10 @@ h2 {
 }
 .container .container-wrap .main .cont.nofix:after {
   position: absolute;
-  width: calc(90% + 30px);
 }
 .container .container-wrap .content1 {
   position: relative;
   padding: 200px 0 0;
-  margin-top: -200px;
 }
 .container .container-wrap .content1 h2 {
   position: absolute;
@@ -439,9 +419,6 @@ h2 {
   .layout .container .container-wrap {
     padding: 0 30px;
   }
-  .layout .container .main .cont p {
-    font-size: 80px;
-  }
   .layout .container .main .cont .bg-text.text1 {
     width: 429px;
   }
@@ -465,9 +442,6 @@ h2 {
     stroke-dasharray: 1061;
     stroke-dashoffset: 1061;
   }
-  .layout .container .main .cont.active p {
-    font-size: 60px;
-  }
   .layout .container .main .cont.active .bg-text text {
     stroke-dashoffset: 0;
   }
@@ -476,7 +450,6 @@ h2 {
   }
   .layout .container .content1 {
     padding: 150px 0 0;
-    margin-top: -150px;
   }
   .layout .container .content1 h2 {
     position: static;
@@ -576,9 +549,6 @@ h2 {
   .layout .container .container-wrap {
     padding: 0 15px;
   }
-  .layout .container .main .cont p {
-    font-size: 50px;
-  }
   .layout .container .main .cont .bg-text.text1 {
     width: 214px;
   }
@@ -604,12 +574,6 @@ h2 {
     stroke-dasharray: 470;
     stroke-dashoffset: 470;
   }
-  .layout .container .main .cont .bg-line {
-    height: 3px;
-  }
-  .layout .container .main .cont.active p {
-    font-size: 30px;
-  }
   .layout .container .main .cont.active .bg-text text {
     stroke-dashoffset: 0;
   }
@@ -618,7 +582,6 @@ h2 {
   }
   .layout .container .content1 {
     padding: 80px 0 0;
-    margin-top: -80px;
   }
   .layout .container .content1 h2 {
     position: static;
