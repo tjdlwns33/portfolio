@@ -186,10 +186,6 @@ h2 {
 
 				.bg-text {
 					position: absolute;
-
-					text {
-						stroke-dashoffset: 1768;
-					}
 				}
 
 				&:after {
@@ -570,14 +566,6 @@ h2 {
 						}
 					}
 				}
-
-				.cont.nofix {
-					.bg-text {
-						text {
-							stroke-dashoffset: 1061;
-						}
-					}
-				}
 			}
 
 			.content1 {
@@ -772,14 +760,6 @@ h2 {
 					.bg-text {
 						text {
 							stroke-dashoffset: 0;
-						}
-					}
-				}
-
-				.cont.nofix {
-					.bg-text {
-						text {
-							stroke-dashoffset: 470;
 						}
 					}
 				}

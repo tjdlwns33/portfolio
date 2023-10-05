@@ -151,9 +151,6 @@ h2 {
 .container .container-wrap .main .cont.nofix .bg-text {
   position: absolute;
 }
-.container .container-wrap .main .cont.nofix .bg-text text {
-  stroke-dashoffset: 1768;
-}
 .container .container-wrap .main .cont.nofix:after {
   position: absolute;
 }
@@ -445,9 +442,6 @@ h2 {
   .layout .container .main .cont.active .bg-text text {
     stroke-dashoffset: 0;
   }
-  .layout .container .main .cont.nofix .bg-text text {
-    stroke-dashoffset: 1061;
-  }
   .layout .container .content1 {
     padding: 150px 0 0;
   }
@@ -576,9 +570,6 @@ h2 {
   }
   .layout .container .main .cont.active .bg-text text {
     stroke-dashoffset: 0;
-  }
-  .layout .container .main .cont.nofix .bg-text text {
-    stroke-dashoffset: 470;
   }
   .layout .container .content1 {
     padding: 80px 0 0;
