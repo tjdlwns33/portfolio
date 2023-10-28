@@ -47,7 +47,7 @@
 	Header #헤더
 **************************************/
 .header {
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.9);
   -webkit-backdrop-filter: blur(6px);
           backdrop-filter: blur(6px);
 }
@@ -112,7 +112,7 @@ h2 {
   font-family: "Dancing Script";
   font-size: 300px;
   stroke-width: 3px;
-  stroke: #c1a9f3;
+  stroke: #c0bcdf;
   fill: transparent;
   stroke-dashoffset: 1768;
   stroke-dasharray: 1768;
@@ -124,9 +124,9 @@ h2 {
   position: fixed;
   top: 50%;
   left: 50%;
-  width: 90vw;
-  height: 90%;
-  background: #5028a7;
+  width: 100vw;
+  height: 100%;
+  background: #132377;
   transform: translate(-50%, -50%);
   transition: background-color 1s;
 }
@@ -137,7 +137,7 @@ h2 {
   background: #0c1625;
 }
 .container .container-wrap .main .cont:last-child.active:after {
-  background: #5028a7;
+  background: #132377;
 }
 .container .container-wrap .main .cont.active {
   opacity: 1;
