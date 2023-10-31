@@ -81,10 +81,13 @@ h2 {
 }
 
 .container .container-wrap .main .cont {
+  position: relative;
+  z-index: -999;
   opacity: 0;
   height: 100vh;
 }
 .container .container-wrap .main .cont .bg-text {
+  z-index: -999;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -140,7 +143,11 @@ h2 {
   background: #132377;
 }
 .container .container-wrap .main .cont.active {
+  z-index: 0;
   opacity: 1;
+}
+.container .container-wrap .main .cont.active .bg-text {
+  z-index: 0;
 }
 .container .container-wrap .main .cont.active .bg-text text {
   stroke-dashoffset: 0;
@@ -186,6 +193,7 @@ h2 {
 }
 .container .container-wrap .content2 .carrer li {
   position: relative;
+  margin-top: 10px;
   padding-left: 30px;
 }
 .container .container-wrap .content2 .carrer li:after {
