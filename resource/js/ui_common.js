@@ -27,6 +27,7 @@ $(window).on('scroll', function(){
 	scrT = $(this).scrollTop();//윈도우 스크롤탑
 	
 	mainVisual();//메인비주얼
+	contentShow();//컨텐츠노출
 })
 
 
@@ -84,6 +85,22 @@ function mainVisual(){
 
 
 /*
+	컨텐츠노출
+*/
+function contentShow(){
+	$('.content').each(function(){
+		var targetscrT = $(this).offset().top,
+			showpoint = targetscrT - $(window).outerHeight();
+
+		if (scrT >= showpoint) {
+			$(this).addClass('show');
+		}
+	})
+}
+
+
+
+/*
 	스크롤 탑버튼
 */
 $(document).on('click', '.btn-top', function() {
@@ -100,7 +117,7 @@ $(document).on('click', '.btn-navi', function() {
 	var thisIndex = $(this).index();
 	var $target = $('.content').eq(thisIndex);
 
-	$('html, body').stop().animate({ scrollTop : $target.offset().top }, 300);
+	$('html, body').stop().animate({ scrollTop : $target.offset().top - $('.header').outerHeight() }, 300);
 	setTimeout(function(){
 		$target.attr('tabindex','-1').focus();
 	},300)

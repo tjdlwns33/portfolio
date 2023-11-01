@@ -200,14 +200,34 @@ h2 {
 			}
 
 		}
+		
+		.content {
+			opacity: 0;
+		}
+
+		.content.show {
+			animation: contentShow 700ms 500ms ease forwards;
+		}
+
+		// 컨텐츠노출
+		@keyframes contentShow {
+			0% {
+				opacity: 0;
+				transform: translateY(100px);
+			}
+			100% {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
 
 		.content1 {
 			position: relative;
-			padding: 200px 0 0;
+			margin: 200px 0 0;
 
 			h2 {
 				position: absolute;
-				top: 200px;
+				top: 0;
 				left: 0;
 			}
 
@@ -228,7 +248,7 @@ h2 {
 
 		.content2 {
 			display: flex;
-			padding: 200px 0 0;
+			margin: 200px 0 0;
 
 			.cont {
 				width: 50%;
@@ -270,7 +290,7 @@ h2 {
 
 		.content3 {
 			overflow: hidden;
-			padding: 200px 0 0;
+			margin: 200px 0 0;
 
 			.cont {
 				margin-top: 30px;
@@ -398,7 +418,7 @@ h2 {
 		}
 
 		.content4 {
-			padding: 200px 0 150px;
+			margin: 200px 0 150px;
 
 			.cont {
 				margin-top: 30px;
@@ -575,8 +595,20 @@ h2 {
 				}
 			}
 
+			// 컨텐츠노출
+			@keyframes contentShow {
+				0% {
+					opacity: 0;
+					transform: translateY(60px);
+				}
+				100% {
+					opacity: 1;
+					transform: translateY(0);
+				}
+			}
+
 			.content1 {
-				padding: 150px 0 0;
+				margin: 120px 0 0;
 
 				h2 {
 					position: static;
@@ -593,7 +625,7 @@ h2 {
 			}
 
 			.content2 {
-				padding: 150px 0 0;
+				margin: 120px 0 0;
 
 				ul {
 					margin-top: 20px;
@@ -620,7 +652,7 @@ h2 {
 			}
 
 			.content3 {
-				padding: 150px 0 0;
+				margin: 120px 0 0;
 
 				.cont {
 					margin-top: 20px;
@@ -657,7 +689,7 @@ h2 {
 			}
 
 			.content4 {
-				padding: 150px 0 100px;
+				margin: 120px 0 100px;
 
 				.cont {
 					margin-top: 20px;
@@ -772,8 +804,20 @@ h2 {
 				}
 			}
 
+			// 컨텐츠노출
+			@keyframes contentShow {
+				0% {
+					opacity: 0;
+					transform: translateY(40px);
+				}
+				100% {
+					opacity: 1;
+					transform: translateY(0);
+				}
+			}
+
 			.content1 {
-				padding: 80px 0 0;
+				margin: 80px 0 0;
 
 				h2 {
 					position: static;
@@ -792,7 +836,7 @@ h2 {
 
 			.content2 {
 				display: block;
-				padding: 80px 0 0;
+				margin: 80px 0 0;
 
 				.cont {
 					width: 100%;
@@ -828,7 +872,7 @@ h2 {
 			}
 
 			.content3 {
-				padding: 80px 0 0;
+				margin: 80px 0 0;
 
 				.cont {
 					margin-top: 15px;
@@ -869,7 +913,7 @@ h2 {
 			}
 
 			.content4 {
-				padding: 80px 0 80px;
+				margin: 80px 0 80px;
 
 				.cont {
 					margin-top: 15px;
