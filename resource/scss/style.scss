@@ -221,7 +221,7 @@ h2 {
 			}
 		}
 
-		.content1 {
+		.aboutme {
 			position: relative;
 			margin: 200px 0 0;
 
@@ -246,49 +246,133 @@ h2 {
 			}
 		}
 
-		.content2 {
-			display: flex;
+		.skill {
 			margin: 200px 0 0;
 
-			.cont {
-				width: 50%;
-			}
+			.cont-wrap {
+				display: flex;
 
-			ul {
-				margin-top: 30px;
-				font-size: 18px;
-			}
-
-			.carrer {
-				li {
-					position: relative;
-					margin-top: 10px;
-					padding-left: 30px;
-
-					&:after {
-						content: '';
-						position: absolute;
-						top: 11px;
-						left: 0;
-						width: 6px;
-						height: 6px;
-						border-radius: 50%;
-						background: #303030;
+				.cont {
+					width: 50%;
+				}
+	
+				ul {
+					margin-top: 30px;
+					font-size: 18px;
+				}
+	
+				.carrer {
+					li {
+						position: relative;
+						margin-top: 10px;
+						padding-left: 30px;
+	
+						&:after {
+							content: '';
+							position: absolute;
+							top: 11px;
+							left: 0;
+							width: 6px;
+							height: 6px;
+							border-radius: 50%;
+							background: #303030;
+						}
+					}
+				}
+	
+				.skills { 
+					li {
+						margin-top: 10px;
+						padding-left: 30px;
+						box-sizing: border-box;
+						background: url('../image/icon_check.png') no-repeat left center;
 					}
 				}
 			}
 
-			.skills { 
-				li {
-					margin-top: 10px;
-					padding-left: 30px;
-					box-sizing: border-box;
-					background: url('../image/icon_check.png') no-repeat left center;
+			.rolling-wrap {
+				overflow: hidden;
+				margin: 200px 0 0;
+				padding-bottom: 80px;
+	
+				.cont {
+					position: relative;
+					height: 100px;
+	
+					ul {
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: 2147px;
+						animation: rolling infinite 30s linear;
+	
+						li {
+							display: inline-block;
+							margin-left: 50px;
+	
+							.img-wrap {
+								position: relative;
+								width: 100px;
+								height: 100px;
+							}
+	
+							img {
+								position: absolute;
+								top: 50%;
+								left: 50%;
+								width: 100%;
+								transform: translate(-50%, -50%);
+							}
+						}
+					}
+	
+					ul.fake {
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: 2147px;
+						margin-left: 2147px;
+						animation: rolling infinite 30s linear;
+					}
+	
+					@keyframes rolling {
+						0% {
+							transform: translateX(0);
+						}
+						100% {
+							transform: translateX(-100%);
+						}
+					}
+				}
+	
+				.ctrl-box {
+					position: relative;
+	
+					.btn-stop {
+						position: absolute;
+						top: 40px;
+						right: 0;
+						width: 40px;
+						height: 40px;
+						border-radius: 10px;
+						background: rgba(0,0,0,.5) url('../image/btn_stop.svg') no-repeat center;
+					}
+					
+					.btn-play {
+						display: none;
+						position: absolute;
+						top: 40px;
+						right: 0;
+						width: 40px;
+						height: 40px;
+						border-radius: 10px;
+						background: rgba(0,0,0,.5) url('../image/btn_play.svg') no-repeat center;
+					}
 				}
 			}
 		}
-
-		.content3 {
+		
+		.project {
 			overflow: hidden;
 			margin: 200px 0 0;
 
@@ -417,7 +501,7 @@ h2 {
 			}
 		}
 
-		.content4 {
+		.contact {
 			margin: 200px 0 150px;
 
 			.cont {
@@ -607,7 +691,7 @@ h2 {
 				}
 			}
 
-			.content1 {
+			.aboutme {
 				margin: 120px 0 0;
 
 				h2 {
@@ -624,34 +708,62 @@ h2 {
 				}
 			}
 
-			.content2 {
+			.skill {
 				margin: 120px 0 0;
 
-				ul {
-					margin-top: 20px;
-					font-size: 16px;
-				}
-
-				.carrer {
-					li {
-						padding-left: 20px;
-
-						&:after {
-							width: 4px;
-							height: 4px;
+				.cont-wrap {
+					.cont {
+						ul {
+							margin-top: 20px;
+							font-size: 16px;
+						}
+		
+						.carrer {
+							li {
+								padding-left: 20px;
+		
+								&:after {
+									width: 4px;
+									height: 4px;
+								}
+							}
+						}
+		
+						.skills {
+							li {
+								padding-left: 20px;
+								background-size: 10px;
+							}
 						}
 					}
 				}
 
-				.skills {
-					li {
-						padding-left: 20px;
-						background-size: 10px;
+				.rolling-wrap {
+					margin: 120px 0 0;
+
+					.cont {
+						height: 80px;
+
+						ul {
+							width: 1867px;
+
+							li {
+								.img-wrap {
+									width: 80px;
+									height: 80px;
+								}
+							}
+						}
+
+						ul.fake {
+							width: 1867px;
+							margin-left: 1867px;
+						}
 					}
 				}
 			}
 
-			.content3 {
+			.project {
 				margin: 120px 0 0;
 
 				.cont {
@@ -688,7 +800,7 @@ h2 {
 				}
 			}
 
-			.content4 {
+			.contact {
 				margin: 120px 0 100px;
 
 				.cont {
@@ -816,7 +928,7 @@ h2 {
 				}
 			}
 
-			.content1 {
+			.aboutme {
 				margin: 80px 0 0;
 
 				h2 {
@@ -834,44 +946,82 @@ h2 {
 				}
 			}
 
-			.content2 {
-				display: block;
+			.skill {
 				margin: 80px 0 0;
 
-				.cont {
-					width: 100%;
-					margin-top: 80px;
+				.cont-wrap {
+					display: block;
 
-					&:first-child {
-						margin-top: 0;
+					.cont {
+						width: 100%;
+						margin-top: 80px;
+	
+						&:first-child {
+							margin-top: 0;
+						}
 					}
-				}
-
-				ul {
-					margin-top: 15px;
-					font-size: 14px;
-				}
-
-				.carrer {
-					li {
-						padding-left: 20px;
-
-						&:after {
-							width: 4px;
-							height: 4px;
+	
+					ul {
+						margin-top: 15px;
+						font-size: 14px;
+					}
+	
+					.carrer {
+						li {
+							padding-left: 20px;
+	
+							&:after {
+								width: 4px;
+								height: 4px;
+							}
+						}
+					}
+	
+					.skills {
+						li {
+							padding-left: 20px;
+							background-size: 10px;
 						}
 					}
 				}
 
-				.skills {
-					li {
-						padding-left: 20px;
-						background-size: 10px;
+				.rolling-wrap {
+					margin: 80px 0 0;
+					padding-bottom: 60px;
+
+					.cont {
+						height: 60px;
+
+						ul {
+							width: 1587px;
+
+							li {
+								.img-wrap {
+									width: 60px;
+									height: 60px;
+								}
+							}
+						}
+
+						ul.fake {
+							width: 1587px;
+							margin-left: 1587px;
+						}
+					}
+
+					.ctrl-box {
+						.btn-play {
+							top: 20px;
+						}
+
+						.btn-stop {
+							top: 20px;
+						}
 					}
 				}
 			}
 
-			.content3 {
+			.project {
 				margin: 80px 0 0;
 
 				.cont {
@@ -912,7 +1062,7 @@ h2 {
 				}
 			}
 
-			.content4 {
+			.contact {
 				margin: 80px 0 80px;
 
 				.cont {

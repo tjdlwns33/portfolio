@@ -16,6 +16,8 @@ $(window).on('load', function(){
 	if ( scrT == 0 ){
 		mainVisualLoad();//메인비주얼 초기실행
 	}
+
+	rolling();//롤링컨텐츠
 })
 
 
@@ -121,4 +123,41 @@ $(document).on('click', '.btn-navi', function() {
 	setTimeout(function(){
 		$target.attr('tabindex','-1').focus();
 	},300)
+})
+
+
+
+/*
+	롤링컨텐츠
+*/
+function rolling() {
+	var $rolling = $('.rolling-wrap'),
+		$list = $rolling.children('.cont');
+	var	listhtml = $list.html();
+
+	if($list.children('.fake').length == 0){
+		$list.append(listhtml);
+		$list.find('ul').last().addClass('fake');
+	}
+}
+
+
+
+/*
+	롤링컨텐츠 컨트롤
+*/
+$(document).on('click','.rolling-wrap .ctrl-box .btn-stop', function(){
+	$('.rolling-wrap ul').css('animation-play-state','paused');
+
+	$(this).css('display','none');
+	$(this).siblings('.btn-play').css('display','block');
+	$(this).siblings('.btn-play').focus();
+})
+
+$(document).on('click','.rolling-wrap .ctrl-box .btn-play', function(){
+	$('.rolling-wrap ul').css('animation-play-state','running');
+
+	$(this).css('display','none');
+	$(this).siblings('.btn-stop').css('display','block');
+	$(this).siblings('.btn-stop').focus();
 })
