@@ -250,7 +250,7 @@ h2 {
   display: inline-block;
   margin-left: 50px;
 }
-.container .container-wrap .skill .rolling-wrap .cont ul li .img-wrap {
+.container .container-wrap .skill .rolling-wrap .cont ul li .img-box {
   position: relative;
   width: 100px;
   height: 100px;
@@ -588,7 +588,7 @@ h2 {
   .layout .container .skill .rolling-wrap .cont ul {
     width: 1867px;
   }
-  .layout .container .skill .rolling-wrap .cont ul li .img-wrap {
+  .layout .container .skill .rolling-wrap .cont ul li .img-box {
     width: 80px;
     height: 80px;
   }
@@ -756,7 +756,7 @@ h2 {
   .layout .container .skill .rolling-wrap .cont ul {
     width: 1587px;
   }
-  .layout .container .skill .rolling-wrap .cont ul li .img-wrap {
+  .layout .container .skill .rolling-wrap .cont ul li .img-box {
     width: 60px;
     height: 60px;
   }
